@@ -33,9 +33,9 @@ class StackDemo {
                 cout << "Stack underflow!";
                 return -1;
             } else {
-                int removedElement = arr[top];
+                num = arr[top];
                 top--;
-                return removedElement;
+                return num;
             }
         }
 
