@@ -5,7 +5,7 @@ MingW GCC Compiler
 */
 
 #include <iostream>
-#define MAX 10
+#define MAX 5
 
 using namespace std;
 
@@ -30,10 +30,13 @@ class Queue {
         }
 
         int deleteElement() {
-            if(front == -1 || front > rear) {
+            if(front == -1) {
                 cout << "\n\nQueue underflow!";
-                front = rear = -1;
                 return -1;
+            } else if(front == rear) {
+                int temp = queueArray[front];
+                front = rear = -1;
+                return temp;
             } else {
                 int temp = queueArray[front];
                 front++;
